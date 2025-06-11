@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login 3D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="card" id="card">
+      <!-- Cara Login -->
+      <div class="face front">
+        <h2>Iniciar Sesión</h2>
+        <div class="form-group">
+          <label>Usuario</label>
+          <input type="text" id="loginUser">
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" id="loginPass">
+        </div>
+        <button class="btn" onclick="handleLogin()">Entrar</button>
+        <p class="alt">O entra con:</p>
+        <div class="social-icons">
+          <i class="fab fa-google" onclick="socialLogin('Google')"></i>
+          <i class="fab fa-linkedin" onclick="socialLogin('LinkedIn')"></i>
+          <i class="fab fa-github" onclick="socialLogin('GitHub')"></i>
+        </div>
+        <p class="toggle" onclick="flipCard()">¿No tienes cuenta? <b>Regístrate</b></p>
+      </div>
+
+      <!-- Cara Registro -->
+      <div class="face back">
+        <h2>Registrarse</h2>
+        <div class="form-group">
+          <label>Nuevo Usuario</label>
+          <input type="text" id="registerUser">
+        </div>
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" id="registerPass">
+        </div>
+        <button class="btn" onclick="handleRegister()">Registrar</button>
+        <p class="toggle" onclick="flipCard()">¿Ya tienes cuenta? <b>Inicia sesión</b></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
